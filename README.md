@@ -1,11 +1,13 @@
-<h2 align="left">Hi 👋! My name is Rajat Soni and I'm🚀 Engineer by passion, innovator by choice, shaping the future one line of code at a time 🌌 | Turning dreams into deployables 🌟</h2>
+<div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px;">
+
+<h2 align="left" style="color:#ffffff;">Hi 👋! My name is Rajat Soni and I'm 🚀 Engineer by passion, innovator by choice, shaping the future one line of code at a time 🌌 | Turning dreams into deployables 🌟</h2>
 
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rajat-sonigit&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://streak-stats.demolab.com?user=rajat-sonigit&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=rajat-sonigit&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=rajat-sonigit&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dark&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://streak-stats.demolab.com?user=rajat-sonigit&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=rajat-sonigit&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dark&hide_border=false" height="150" alt="languages graph"  />
 </div>
 
 ###
@@ -53,45 +55,6 @@
   </a>
 </div>
 
-###
-
-<br clear="both">
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/rajat-sonigit/rajat-sonigit/output/snake-dark.svg" alt="Snake animation" />
 </div>
 
-### Steps for Snake Animation in Dark Mode
-1. **Ensure the correct path**:
-   - Place the snake SVG (`output/snake-dark.svg`) in your GitHub repository. If the file doesn't exist, use a GitHub Actions workflow to generate it.
-   
-2. **Use a GitHub Actions Workflow**:
-   Create a `.github/workflows/snake.yml` file with the following:
-
-```yaml
-name: Generate Snake Animation
-
-on:
-  schedule:
-    - cron: "0 0 * * *" # Runs daily
-  workflow_dispatch:
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Generate Snake
-        uses: Platane/snk@v2
-        with:
-          github_user_name: rajat-sonigit
-          outputs: dist/snake-dark.svg
-
-      - name: Push to GitHub
-        uses: ad-m/github-push-action@v0.6
-        with:
-          branch: output
-          force: true
 

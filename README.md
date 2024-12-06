@@ -57,6 +57,41 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/rajat-sonigit/rajat-sonigit/output/snake.svg" alt="Snake animation" />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/rajat-sonigit/rajat-sonigit/output/snake-dark.svg" alt="Snake animation" />
+</div>
 
-###
+### Steps for Snake Animation in Dark Mode
+1. **Ensure the correct path**:
+   - Place the snake SVG (`output/snake-dark.svg`) in your GitHub repository. If the file doesn't exist, use a GitHub Actions workflow to generate it.
+   
+2. **Use a GitHub Actions Workflow**:
+   Create a `.github/workflows/snake.yml` file with the following:
+
+```yaml
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate Snake
+        uses: Platane/snk@v2
+        with:
+          github_user_name: rajat-sonigit
+          outputs: dist/snake-dark.svg
+
+      - name: Push to GitHub
+        uses: ad-m/github-push-action@v0.6
+        with:
+          branch: output
+          force: true
+

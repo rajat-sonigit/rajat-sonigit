@@ -1,6 +1,7 @@
 <div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px;">
 
 <h2 align="left" style="color:#ffffff;">Hi 👋! My name is Rajat Soni and I'm 🚀 Engineer by passion, innovator by choice, shaping the future one line of code at a time 🌌 | Turning dreams into deployables 🌟</h2>
+<h2 align="left" style="color:#ffffff;">Ex Intern at EF Polymer. Built warehouse & sales ops systems for agriculture supply chains.</h2>
 
 ###
 
